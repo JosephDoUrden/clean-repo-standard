@@ -49,3 +49,9 @@ This is a **template repo**, not a codebase with build/test/lint commands. Contr
 - `main` — production-ready, protected, merge via PR only
 - `dev` — integration branch, all feature work merges here first
 - `feature/*`, `fix/*` — short-lived branches off `dev`
+
+## Git Attribution
+
+- Never include `Co-Authored-By` lines referencing Claude, Anthropic, or any AI tool in commit messages.
+- Commits must appear as if written solely by the repository owner.
+- Do not add AI-related metadata, tags, or footers to any commit, PR, or issue.

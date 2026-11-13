@@ -1,0 +1,20 @@
+# Dependabot keeps the pinned action SHAs in .github/workflows/ up to date.
+# Docs: https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Uncomment once you have a dev branch, so updates follow the dev-to-main flow.
+    # target-branch: "dev"
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  # Add one block per package manager your project uses, for example:
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"

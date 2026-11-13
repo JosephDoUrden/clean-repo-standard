@@ -1,0 +1,39 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  stale:
+    name: Mark and close stale issues and PRs
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write # lets the action keep its state in the Actions cache
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
+        with:
+          days-before-stale: 60
+          days-before-close: 14
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security
+          exempt-pr-labels: pinned,security
+          exempt-draft-pr: true
+          # Only issues and PRs opened on or after this date are checked.
+          # Change it or remove it in your own repo.
+          start-date: "2026-11-13T00:00:00Z"
+          stale-issue-message: >
+            This issue has had no activity for 60 days. It will be closed in
+            14 days unless someone comments or removes the stale label.
+          stale-pr-message: >
+            This pull request has had no activity for 60 days. It will be closed
+            in 14 days unless someone comments, pushes a commit, or removes the
+            stale label.
+          close-issue-message: Closed after 14 days with no activity. Reopen it if it still matters.
+          close-pr-message: Closed after 14 days with no activity. Reopen it if you pick it up again.

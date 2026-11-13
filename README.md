@@ -20,6 +20,10 @@ A ready-to-use repository template with branch protection rules, a CI workflow, 
 |------|---------|
 | [`.github/pull_request_template.md`](.github/pull_request_template.md) | PR template with summary, risk level, testing, and rollback sections |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | Minimal CI workflow that runs on PRs to `dev` and `main` |
+| [`.github/workflows/stale.yml`](.github/workflows/stale.yml) | Marks issues and PRs stale after 60 days without activity and closes them 14 days later |
+| [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly Dependabot updates for the pinned GitHub Actions |
+| [`.github/CODEOWNERS`](.github/CODEOWNERS) | Requests review from the owner on every PR. Replace `@JosephDoUrden` with your own user or team |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Bug report and feature request templates |
 | [`docs/branch-protection.md`](docs/branch-protection.md) | Step-by-step guide to protecting `main` and `dev` in GitHub |
 | [`docs/verified-commits.md`](docs/verified-commits.md) | How to set up SSH or GPG commit signing |
 | [`docs/dev-to-main-flow.md`](docs/dev-to-main-flow.md) | The branching workflow, merge strategies, and hotfix process |

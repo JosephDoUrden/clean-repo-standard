@@ -1,0 +1,10 @@
+# Code owners are requested for review automatically when a pull request
+# touches a matching path. The last matching pattern wins.
+# Replace @JosephDoUrden with your own user or team, for example @your-org/maintainers.
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+*                   @JosephDoUrden
+
+# Changes to CI, rulesets and repo settings deserve a second look.
+/.github/           @JosephDoUrden
+/examples/          @JosephDoUrden

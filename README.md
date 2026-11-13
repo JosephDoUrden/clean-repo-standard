@@ -1,5 +1,10 @@
 # clean-repo-standard
 
+[![License: MIT](https://img.shields.io/github/license/JosephDoUrden/clean-repo-standard)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/JosephDoUrden/clean-repo-standard)](https://github.com/JosephDoUrden/clean-repo-standard/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/JosephDoUrden/clean-repo-standard)](https://github.com/JosephDoUrden/clean-repo-standard/network/members)
+[![Use this template](https://img.shields.io/badge/template-use%20this%20template-2ea44f)](https://github.com/JosephDoUrden/clean-repo-standard/generate)
+
 **A GitHub repo template for shipping to production safely.**
 
 > Move fast — but don't break prod.
@@ -32,6 +37,19 @@ A ready-to-use repository template with branch protection rules, a CI workflow, 
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to open issues and pull requests, plus the docs writing style |
 | [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Contributor Covenant 2.1 |
 | [`SECURITY.md`](SECURITY.md) | How to report a vulnerability privately |
+
+## How changes reach production
+
+```mermaid
+flowchart LR
+    F["feature/* or fix/*"] -->|"PR, squash merge"| D[dev]
+    D -->|"PR, merge commit"| M[main]
+    M -->|deploy| P[production]
+    H["fix/* hotfix"] -->|PR| M
+    M -.->|merge back| D
+```
+
+Every arrow into `dev` or `main` is a pull request that needs the **Lint & Test** check to pass. Nobody pushes to `main` directly, admins included. [docs/dev-to-main-flow.md](docs/dev-to-main-flow.md) has the details.
 
 ## Quick start
 

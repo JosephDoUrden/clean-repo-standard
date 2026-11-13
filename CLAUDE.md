@@ -19,9 +19,15 @@ Provides battle-tested patterns for:
 
 ```
 .github/
+  CODEOWNERS                 — Default reviewers for every path
+  ISSUE_TEMPLATE/
+    bug_report.md            — Bug report template
+    feature_request.md       — Feature request template
+  dependabot.yml             — Weekly updates for pinned GitHub Actions
   pull_request_template.md   — PR template (summary, risk, testing, rollback)
   workflows/
     ci.yml                   — CI workflow: runs on PRs to dev and main
+    stale.yml                — Marks and closes inactive issues and PRs
 docs/
   branch-protection.md       — GitHub UI walkthrough for protecting main and dev
   dev-to-main-flow.md        — Branching workflow, merge strategies, hotfix process

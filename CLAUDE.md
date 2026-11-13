@@ -26,6 +26,9 @@ docs/
   branch-protection.md       — GitHub UI walkthrough for protecting main and dev
   dev-to-main-flow.md        — Branching workflow, merge strategies, hotfix process
   verified-commits.md        — SSH and GPG commit signing setup
+examples/
+  ruleset-main.json          — Importable ruleset for the default branch
+  ruleset-dev.json           — Importable ruleset for dev
 CLAUDE.md                    — Guidance for Claude Code (this file)
 CODE_OF_CONDUCT.md           — Contributor Covenant 2.1
 CONTRIBUTING.md              — Issue and PR process, writing style

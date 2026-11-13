@@ -23,6 +23,8 @@ A ready-to-use repository template with branch protection rules, a CI workflow, 
 | [`docs/branch-protection.md`](docs/branch-protection.md) | Step-by-step guide to protecting `main` and `dev` in GitHub |
 | [`docs/verified-commits.md`](docs/verified-commits.md) | How to set up SSH or GPG commit signing |
 | [`docs/dev-to-main-flow.md`](docs/dev-to-main-flow.md) | The branching workflow, merge strategies, and hotfix process |
+| [`examples/ruleset-main.json`](examples/ruleset-main.json) | Ruleset for `main`, ready to import |
+| [`examples/ruleset-dev.json`](examples/ruleset-dev.json) | Ruleset for `dev`, ready to import |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to open issues and pull requests, plus the docs writing style |
 | [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Contributor Covenant 2.1 |
 | [`SECURITY.md`](SECURITY.md) | How to report a vulnerability privately |
@@ -31,13 +33,24 @@ A ready-to-use repository template with branch protection rules, a CI workflow, 
 
 1. **Use this template.** Click "Use this template" on GitHub to create your repo.
 
-2. **Set up branch protection.** Follow [docs/branch-protection.md](docs/branch-protection.md) to protect `main` and `dev`.
+2. **Set up branch protection.** Import the rulesets (see below) or follow [docs/branch-protection.md](docs/branch-protection.md) to protect `main` and `dev` by hand.
 
 3. **Configure commit signing.** Follow [docs/verified-commits.md](docs/verified-commits.md) to sign your commits with SSH or GPG.
 
 4. **Customize CI.** Open [`.github/workflows/ci.yml`](.github/workflows/ci.yml) and replace the placeholder `echo` commands with your actual lint and test commands.
 
 5. **Start shipping.** Read [docs/dev-to-main-flow.md](docs/dev-to-main-flow.md) for the day-to-day workflow, then open your first PR.
+
+## Import the rulesets
+
+The [`examples/`](examples/) folder holds ruleset exports for `main` and `dev`. Import them in **Settings > Rules > Rulesets > New ruleset > Import a ruleset**, or from the command line:
+
+```bash
+gh api --method POST repos/OWNER/REPO/rulesets --input examples/ruleset-main.json
+gh api --method POST repos/OWNER/REPO/rulesets --input examples/ruleset-dev.json
+```
+
+[docs/branch-protection.md](docs/branch-protection.md#import-the-rulesets-instead) explains what each file enforces and what to change first.
 
 ## Philosophy
 

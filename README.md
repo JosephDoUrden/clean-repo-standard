@@ -23,6 +23,9 @@ A ready-to-use repository template with branch protection rules, a CI workflow, 
 | [`docs/branch-protection.md`](docs/branch-protection.md) | Step-by-step guide to protecting `main` and `dev` in GitHub |
 | [`docs/verified-commits.md`](docs/verified-commits.md) | How to set up SSH or GPG commit signing |
 | [`docs/dev-to-main-flow.md`](docs/dev-to-main-flow.md) | The branching workflow, merge strategies, and hotfix process |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to open issues and pull requests, plus the docs writing style |
+| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Contributor Covenant 2.1 |
+| [`SECURITY.md`](SECURITY.md) | How to report a vulnerability privately |
 
 ## Quick start
 
@@ -56,7 +59,9 @@ Commit signing is recommended but not required. If you skip it, just don't enabl
 
 ## Contributing
 
-Contributions are welcome. Open an issue or PR if you have ideas for improvements.
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and report security problems through [SECURITY.md](SECURITY.md).
+
+If you use this template, update the contact details in `CODE_OF_CONDUCT.md` and `SECURITY.md` for your own project.
 
 ## License
 

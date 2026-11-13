@@ -44,3 +44,4 @@ The docs follow a few rules. Please match them:
 
 - Pin third-party actions to a full commit SHA and put the version in a comment, for example `uses: actions/checkout@<sha> # v7.0.1`.
 - Give every workflow the smallest `permissions:` block it needs.
+- If you change a ruleset in `examples/`, keep it valid for the [create a repository ruleset](https://docs.github.com/en/rest/repos/rules#create-a-repository-ruleset) API and update the table in [docs/branch-protection.md](docs/branch-protection.md).

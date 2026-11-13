@@ -27,8 +27,11 @@ docs/
   dev-to-main-flow.md        — Branching workflow, merge strategies, hotfix process
   verified-commits.md        — SSH and GPG commit signing setup
 CLAUDE.md                    — Guidance for Claude Code (this file)
+CODE_OF_CONDUCT.md           — Contributor Covenant 2.1
+CONTRIBUTING.md              — Issue and PR process, writing style
 LICENSE                      — MIT license
 README.md                    — Project overview, quick start, FAQ
+SECURITY.md                  — Private vulnerability reporting
 ```
 
 ## Writing Style
